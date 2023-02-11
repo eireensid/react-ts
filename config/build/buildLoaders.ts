@@ -1,9 +1,8 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {BuildOptions} from "./types/config";
+import type webpack from 'webpack'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { type BuildOptions } from './types/config'
 
-export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
-
+export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   const svgLoader = {
     test: /\.svg$/,
     use: ['@svgr/webpack']
@@ -13,9 +12,9 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
     use: [
       {
-        loader: 'file-loader',
-      },
-    ],
+        loader: 'file-loader'
+      }
+    ]
   }
 
   const cssLoader = {
@@ -25,7 +24,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       // Translates CSS into CommonJS
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: {
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
@@ -36,8 +35,8 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         }
       },
       // Compiles Sass to CSS
-      "sass-loader",
-    ],
+      'sass-loader'
+    ]
   }
 
   const typescriptLoader = {
