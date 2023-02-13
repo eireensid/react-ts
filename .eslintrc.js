@@ -41,7 +41,7 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
-    'max-len': ['error', { ignoreComments: true }]
+    'max-len': ['error', { ignoreComments: true, code: 100 }]
   },
   globals: {
     __IS_DEV__: true
