@@ -21,7 +21,10 @@ module.exports = {
     'i18next'
   ],
   rules: {
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.tsx'] }
+    ],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -37,7 +40,8 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/naming-convention': 'off',
-    '@typescript-eslint/prefer-nullish-coalescing': 'off'
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    'max-len': ['error', { ignoreComments: true }]
   },
   globals: {
     __IS_DEV__: true
