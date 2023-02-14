@@ -8,8 +8,6 @@ module.exports = {
     'standard-with-typescript',
     'plugin:i18next/recommended'
   ],
-  overrides: [
-  ],
   parserOptions: {
     project: './tsconfig.json',
     ecmaVersion: 'latest',
@@ -45,5 +43,13 @@ module.exports = {
   },
   globals: {
     __IS_DEV__: true
-  }
+  },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off'
+      }
+    }
+  ]
 }
