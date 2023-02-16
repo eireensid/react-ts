@@ -38,11 +38,6 @@ export default {
   ],
   rootDir: '../../',
   setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
-  // globals: {
-  //   'ts-jest': {
-  //     diagnostics: false
-  //   }
-  // },
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
