@@ -1,9 +1,9 @@
-import {classNames} from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ThemeSwitcher.module.scss'
 import React from 'react'
-import {Theme, useTheme} from 'app/providers/ThemeProvider'
+import { useTheme } from 'app/providers/ThemeProvider'
 import Icon from 'shared/assets/icons/theme.svg'
-import {Button, ThemeButton} from 'shared/ui/Button/Button'
+import { Button, ThemeButton } from 'shared/ui/Button/Button'
 
 export enum IconTheme {
   PRIMARY = 'light',
