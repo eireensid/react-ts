@@ -30,6 +30,8 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    '@typescript-eslint/consistent-type-assertions': 'off',
+    'react/display-name': 'off',
     'max-len': ['error', {
       ignoreComments: true,
       code: 100
