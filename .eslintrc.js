@@ -32,6 +32,7 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
     'react/display-name': 'off',
+    '@typescript-eslint/prefer-includes': 'off',
     'max-len': ['error', {
       ignoreComments: true,
       code: 100
