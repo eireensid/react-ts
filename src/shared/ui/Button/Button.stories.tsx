@@ -1,7 +1,7 @@
 import React from 'react'
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 
-import {Button, ButtonSize, ButtonTheme} from './Button'
+import { Button, ButtonSize, ButtonTheme } from './Button'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 
@@ -91,4 +91,3 @@ SquareSizeXL.args = {
   square: true,
   size: ButtonSize.XL
 }
-

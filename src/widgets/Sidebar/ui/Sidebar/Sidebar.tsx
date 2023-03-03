@@ -1,12 +1,12 @@
-import {classNames} from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Sidebar.module.scss'
-import React, {useState} from 'react'
-import {ThemeSwitcher} from 'widgets/ThemeSwitcher'
-import {LangSwitcher} from 'widgets/LangSwitcher'
-import {Button, ButtonSize, ButtonTheme} from 'shared/ui/Button/Button'
-import {useTranslation} from 'react-i18next'
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import {RoutePath} from "shared/config/routeConfig/routeConfig";
+import React, { useState } from 'react'
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+import { LangSwitcher } from 'widgets/LangSwitcher'
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
+import { useTranslation } from 'react-i18next'
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import MainIcon from 'shared/assets/icons/main-icon.svg'
 import AboutIcon from 'shared/assets/icons/about-icon.svg'
 

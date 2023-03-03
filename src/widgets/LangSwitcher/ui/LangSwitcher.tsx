@@ -3,7 +3,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 interface LangSwitcherProps {
-  className?: string,
+  className?: string
   short?: boolean
 }
 
