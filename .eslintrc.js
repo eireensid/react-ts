@@ -42,7 +42,11 @@ module.exports = {
       ignoreComments: true,
       code: 100
     }],
-    'linebreak-style': 0
+    'linebreak-style': 0,
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+    'no-param-reassign': 'off',
+    '@typescript-eslint/no-empty-interface': 'off'
   },
   globals: {
     __IS_DEV__: true
