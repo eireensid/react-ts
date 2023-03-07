@@ -15,7 +15,7 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
-  const { theme, toggleTheme } = useTheme()
+  const { toggleTheme } = useTheme()
 
   return (
     <Button
@@ -23,7 +23,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       className={classNames(cls.ThemeSwitcher, {}, [className])}
       onClick={toggleTheme}
     >
-      <Icon className={cls[theme]} />
+      <Icon className={cls.ico} />
     </Button>
   )
 }
