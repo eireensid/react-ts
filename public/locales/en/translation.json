@@ -7,5 +7,7 @@
   "Main": "Main",
   "About": "About",
   "ToggleBtn": "toggle",
-  "SignIn": "Sign in"
+  "SignIn": "Sign in",
+  "EnterUsername": "EnterUsername",
+  "EnterPassword": "EnterPassword"
 }

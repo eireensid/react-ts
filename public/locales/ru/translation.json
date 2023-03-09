@@ -7,5 +7,7 @@
   "Main": "Главная",
   "About": "О нас",
   "ToggleBtn": "Переключить",
-  "SignIn": "Войти"
+  "SignIn": "Войти",
+  "EnterUsername": "Введите username",
+  "EnterPassword": "Введите пароль"
 }
