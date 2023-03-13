@@ -8,6 +8,9 @@
   "About": "About",
   "ToggleBtn": "toggle",
   "SignIn": "Sign in",
-  "EnterUsername": "EnterUsername",
-  "EnterPassword": "EnterPassword"
+  "SignOut": "Sign out",
+  "EnterUsername": "Enter username",
+  "EnterPassword": "Enter password",
+  "AuthorizationForm": "Authorization form",
+  "AuthError": "Wrong username or password"
 }

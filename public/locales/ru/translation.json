@@ -8,6 +8,9 @@
   "About": "О нас",
   "ToggleBtn": "Переключить",
   "SignIn": "Войти",
+  "SignOut": "Выйти",
   "EnterUsername": "Введите username",
-  "EnterPassword": "Введите пароль"
+  "EnterPassword": "Введите пароль",
+  "AuthorizationForm": "Форма авторизации",
+  "AuthError": "Вы ввели неверный логин или пароль"
 }
