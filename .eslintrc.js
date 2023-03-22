@@ -56,7 +56,8 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off'
   },
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: true
   },
   overrides: [{
     files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
