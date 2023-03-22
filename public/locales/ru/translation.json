@@ -12,5 +12,6 @@
   "EnterUsername": "Введите username",
   "EnterPassword": "Введите пароль",
   "AuthorizationForm": "Форма авторизации",
-  "AuthError": "Вы ввели неверный логин или пароль"
+  "AuthError": "Вы ввели неверный логин или пароль",
+  "ProfilePage": "Страница профиля"
 }

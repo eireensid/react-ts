@@ -5,12 +5,14 @@ import {
   type EnhancedStore, type Reducer,
   type ReducersMapObject
 } from '@reduxjs/toolkit'
+import { type ProfileSchema } from 'entities/Profile'
 
 export interface StateSchema {
   user: UserSchema
 
   // async reducers
   loginForm?: LoginSchema
+  profile?: ProfileSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
