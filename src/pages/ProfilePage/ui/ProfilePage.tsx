@@ -1,21 +1,25 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import {
-  DynamicModuleLoader,
-  type ReducersList
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import {classNames} from 'shared/lib/classNames/classNames'
+import {DynamicModuleLoader, type ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import {
   fetchProfileData,
-  getProfileError, getProfileForm,
-  getProfileIsLoading, getProfileReadonly, profileActions,
+  getProfileError,
+  getProfileForm,
+  getProfileIsLoading,
+  getProfileReadonly,
+  getProfileValidateErrors,
+  profileActions,
   ProfileCard,
-  profileReducer
+  profileReducer,
+  ValidateProfileError
 } from 'entities/Profile'
-import { memo, useCallback, useEffect } from 'react'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useSelector } from 'react-redux'
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
-import { type Currency } from 'entities/Currency'
-import { type Country } from 'entities/Country'
+import {memo, useCallback, useEffect} from 'react'
+import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import {useSelector} from 'react-redux'
+import {ProfilePageHeader} from './ProfilePageHeader/ProfilePageHeader'
+import {type Currency} from 'entities/Currency'
+import {type Country} from 'entities/Country'
+import {Text, TextTheme} from "shared/ui/Text/Text";
+import {useTranslation} from "react-i18next";
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -26,11 +30,21 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = memo(({ className }: ProfilePageProps) => {
+  const {t} = useTranslation('profile')
   const dispatch = useAppDispatch()
   const formData = useSelector(getProfileForm)
   const error = useSelector(getProfileError)
   const isLoading = useSelector(getProfileIsLoading)
   const readonly = useSelector(getProfileReadonly)
+  const validateErrors = useSelector(getProfileValidateErrors)
+
+  const validateErrorTranslates = {
+    [ValidateProfileError.SERVER_ERROR]: t('ServerError'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('IncorrectCountry'),
+    [ValidateProfileError.INCORRECT_AGE]: t('IncorrectAge'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('IncorrectUserData'),
+    [ValidateProfileError.NO_DATA]: t('NoData')
+  }
 
   useEffect(() => {
     dispatch(fetchProfileData())
@@ -45,7 +59,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
   }, [dispatch])
 
   const onChangeAge = useCallback((value?: string) => {
-    dispatch(profileActions.updateProfile({ age: Number(value || 0) }))
+    dispatch(profileActions.updateProfile({ age: Number(value?.replace(/\D/gi, '') || 0) }))
   }, [dispatch])
 
   const onChangeCity = useCallback((value?: string) => {
@@ -72,6 +86,13 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
+                {validateErrors?.length && validateErrors.map((err) => (
+                  <Text
+                    key={err}
+                    theme={TextTheme.ERROR}
+                    text={validateErrorTranslates[err]}
+                  />
+                ))}
                 <ProfileCard
                   data={formData}
                   isLoading={isLoading}

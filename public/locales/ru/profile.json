@@ -10,5 +10,10 @@
   "Username": "Введите имя пользователя",
   "Avatar": "Добавьте ссылку на аватар",
   "LoadingError": "Loading error",
-  "ReloadPage": "Try to reload page"
+  "ReloadPage": "Try to reload page",
+  "ServerError": "Серверная ошибка",
+  "IncorrectCountry": "Некорректная страна",
+  "IncorrectAge": "Некорректный возраст",
+  "IncorrectUserData": "Имя и фамилия обязательны",
+  "NoData": "Нет данных"
 }

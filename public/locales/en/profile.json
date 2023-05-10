@@ -10,5 +10,10 @@
   "Username": "Enter username",
   "Avatar": "Attach avatar link",
   "LoadingError": "Произошла ошибка при загрузке профиля",
-  "ReloadPage": "Попробуйте обновить страницу"
+  "ReloadPage": "Попробуйте обновить страницу",
+  "ServerError": "Server error",
+  "IncorrectCountry": "Incorrect country",
+  "IncorrectAge": "Incorrect age",
+  "IncorrectUserData": "Name and surname are required",
+  "NoData": "No data"
 }
