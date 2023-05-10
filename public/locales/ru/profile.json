@@ -1,6 +1,14 @@
 {
   "Profile": "Профиль",
   "Edit": "Редактировать",
+  "Cancel": "Отменить",
+  "Save": "Сохранить",
   "Name": "Ваше имя",
-  "Surname": "Ваша фамилия"
+  "Surname": "Ваша фамилия",
+  "Age": "Ваш возраст",
+  "City": "Город",
+  "Username": "Введите имя пользователя",
+  "Avatar": "Добавьте ссылку на аватар",
+  "LoadingError": "Loading error",
+  "ReloadPage": "Try to reload page"
 }

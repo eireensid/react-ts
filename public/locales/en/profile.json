@@ -1,6 +1,14 @@
 {
   "Profile": "Profile",
   "Edit": "Edit",
+  "Cancel": "Cancel",
+  "Save": "Save",
   "Name": "Name",
-  "Surname": "Surname"
+  "Surname": "Surname",
+  "Age": "Your age",
+  "City": "City",
+  "Username": "Enter username",
+  "Avatar": "Attach avatar link",
+  "LoadingError": "Произошла ошибка при загрузке профиля",
+  "ReloadPage": "Попробуйте обновить страницу"
 }

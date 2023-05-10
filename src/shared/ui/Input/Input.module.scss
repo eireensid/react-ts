@@ -3,3 +3,11 @@
   width: 100%;
   text-shadow: 0 0 0 var(--primary-color);
 }
+
+.readonly {
+  opacity: 0.7;
+
+  input {
+    cursor: initial;
+  }
+}

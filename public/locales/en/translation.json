@@ -13,5 +13,7 @@
   "EnterPassword": "Enter password",
   "AuthorizationForm": "Authorization form",
   "AuthError": "Wrong username or password",
-  "ProfilePage": "Profile page"
+  "ProfilePage": "Profile page",
+  "Currency": "Choose currency",
+  "Country": "Choose country"
 }

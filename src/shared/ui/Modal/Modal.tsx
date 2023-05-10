@@ -1,4 +1,4 @@
-import {classNames, Mods} from 'shared/lib/classNames/classNames'
+import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import React, {
   type ReactNode, useCallback, useEffect, useRef, useState
 } from 'react'
