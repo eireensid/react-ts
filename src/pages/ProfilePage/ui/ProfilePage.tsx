@@ -1,5 +1,7 @@
-import {classNames} from 'shared/lib/classNames/classNames'
-import {DynamicModuleLoader, type ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { classNames } from 'shared/lib/classNames/classNames'
+import {
+  DynamicModuleLoader, type ReducersList
+} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import {
   fetchProfileData,
   getProfileError,
@@ -12,14 +14,14 @@ import {
   profileReducer,
   ValidateProfileError
 } from 'entities/Profile'
-import {memo, useCallback, useEffect} from 'react'
-import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import {useSelector} from 'react-redux'
-import {ProfilePageHeader} from './ProfilePageHeader/ProfilePageHeader'
-import {type Currency} from 'entities/Currency'
-import {type Country} from 'entities/Country'
-import {Text, TextTheme} from "shared/ui/Text/Text";
-import {useTranslation} from "react-i18next";
+import { memo, useCallback, useEffect } from 'react'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useSelector } from 'react-redux'
+import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
+import { type Currency } from 'entities/Currency'
+import { type Country } from 'entities/Country'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { useTranslation } from 'react-i18next'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -30,7 +32,7 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = memo(({ className }: ProfilePageProps) => {
-  const {t} = useTranslation('profile')
+  const { t } = useTranslation('profile')
   const dispatch = useAppDispatch()
   const formData = useSelector(getProfileForm)
   const error = useSelector(getProfileError)
@@ -47,7 +49,9 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
   }
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [dispatch])
 
   const onChangeFirstname = useCallback((value?: string) => {
