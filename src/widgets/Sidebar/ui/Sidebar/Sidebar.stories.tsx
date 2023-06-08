@@ -4,7 +4,7 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import { Sidebar } from './Sidebar'
-import {StoreDecorator} from "shared/config/storybook/StoreDecorator/StoreDecorator";
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'widget/Sidebar',
@@ -33,8 +33,8 @@ Dark.decorators = [
   })
 ]
 
-export const NoAuth = Template.bind({});
-NoAuth.args = {};
+export const NoAuth = Template.bind({})
+NoAuth.args = {}
 NoAuth.decorators = [
   StoreDecorator({
     user: {}
