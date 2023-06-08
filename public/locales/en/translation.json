@@ -15,5 +15,9 @@
   "AuthError": "Wrong username or password",
   "ProfilePage": "Profile page",
   "Currency": "Choose currency",
-  "Country": "Choose country"
+  "Country": "Choose country",
+  "MenuMain": "Main",
+  "MenuAbout": "About",
+  "MenuProfile": "Profile",
+  "MenuArticles": "Articles"
 }

@@ -15,5 +15,9 @@
   "AuthError": "Вы ввели неверный логин или пароль",
   "ProfilePage": "Страница профиля",
   "Currency": "Укажите валюту",
-  "Country": "Укажите страну"
+  "Country": "Укажите страну",
+  "MenuMain": "Главная",
+  "MenuAbout": "О сайте",
+  "MenuProfile": "Профиль",
+  "MenuArticles": "Статьи"
 }
