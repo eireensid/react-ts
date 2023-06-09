@@ -33,6 +33,6 @@ export const SidebarItemsList: SidebarItemType[] = [
     path: RoutePath.articles,
     Icon: ArticleIcon,
     text: 'MenuArticles',
-    authOnly: true,
+    authOnly: true
   }
 ]
