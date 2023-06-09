@@ -9,6 +9,9 @@ import { type ProfileSchema } from 'entities/Profile'
 import { type NavigateOptions, type To } from 'react-router-dom'
 import { type AxiosInstance } from 'axios'
 import { type ArticleDetailsSchema } from 'entities/Article'
+import {
+  type ArticleDetailsCommentsSchema
+} from 'pages/ArticleDetailsPage/model/types/ArticleDetailsCommentsSchema'
 
 export interface StateSchema {
   user: UserSchema
@@ -17,6 +20,7 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
+  articleDetailsComments?: ArticleDetailsCommentsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

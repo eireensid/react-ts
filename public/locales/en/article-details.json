@@ -1,4 +1,5 @@
 {
   "ArticleNotFound": "Статья не найдена",
-  "LoadError": "Error on article loading"
+  "LoadError": "Error on article loading",
+  "Comments": "Comments"
 }

@@ -19,5 +19,6 @@
   "MenuMain": "Главная",
   "MenuAbout": "О сайте",
   "MenuProfile": "Профиль",
-  "MenuArticles": "Статьи"
+  "MenuArticles": "Статьи",
+  "NoComments": "Комментарии отсутствуют"
 }

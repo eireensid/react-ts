@@ -19,5 +19,6 @@
   "MenuMain": "Main",
   "MenuAbout": "About",
   "MenuProfile": "Profile",
-  "MenuArticles": "Articles"
+  "MenuArticles": "Articles",
+  "NoComments": "There are no comments"
 }
