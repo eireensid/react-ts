@@ -1,5 +1,7 @@
 {
-  "ArticleNotFound": "Статья не найдена",
+  "ArticleNotFound": "Article not found",
   "LoadError": "Error on article loading",
-  "Comments": "Comments"
+  "Comments": "Comments",
+  "EnterComment": "Enter comment",
+  "Send": "Send"
 }

@@ -11,3 +11,11 @@
     cursor: initial;
   }
 }
+
+.withoutBorder {
+  input,
+  input:focus {
+    border: none;
+    outline: none;
+  }
+}

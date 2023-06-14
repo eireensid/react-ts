@@ -17,3 +17,10 @@ Primary.args = {
   placeholder: 'Type text',
   value: '123123'
 }
+
+export const NoBorder = Template.bind({})
+NoBorder.args = {
+  placeholder: 'Type text',
+  value: '123123',
+  withoutBorder: true
+}

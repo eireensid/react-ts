@@ -12,6 +12,7 @@ interface InputProps extends HTMLInputProps {
   onChange?: (value: string) => void
   autoFocus?: boolean
   readonly?: boolean
+  withoutBorder?: boolean
 }
 
 export const Input = memo((props: InputProps) => {
@@ -23,6 +24,7 @@ export const Input = memo((props: InputProps) => {
     placeholder,
     autoFocus,
     readonly,
+    withoutBorder = false,
     ...otherProps
   } = props
 
@@ -32,7 +34,8 @@ export const Input = memo((props: InputProps) => {
   }
 
   const mods: Mods = {
-    [cls.readonly]: readonly
+    [cls.readonly]: readonly,
+    [cls.withoutBorder]: withoutBorder
   }
 
   return (
