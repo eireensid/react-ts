@@ -3,5 +3,6 @@
   "LoadError": "Error on article loading",
   "Comments": "Comments",
   "EnterComment": "Enter comment",
-  "Send": "Send"
+  "Send": "Send",
+  "BackToList": "Back to list"
 }

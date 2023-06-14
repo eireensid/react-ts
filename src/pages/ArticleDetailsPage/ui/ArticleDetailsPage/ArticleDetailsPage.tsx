@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetails } from 'entities/Article'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Text } from 'shared/ui/Text/Text'
 import { CommentList } from 'entities/Comment'
 import { useDispatch, useSelector } from 'react-redux'
@@ -25,6 +25,8 @@ import { AddCommentForm } from 'features/addCommentForm'
 import {
   addCommentForArticle
 } from '../../model/services/addCommentForArticle/addCommentForArticle'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -41,6 +43,11 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const dispatch = useDispatch()
   const comments = useSelector(getArticleComments.selectAll)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
+  const navigate = useNavigate()
+
+  const onBackToList = useCallback(() => {
+    navigate(RoutePath.articles)
+  }, [navigate])
 
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
@@ -61,6 +68,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
         <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
+              {t('BackToList')}
+            </Button>
             <ArticleDetails id={id} />
             <Text className={cls.commentTitle} title={t('Comments')} />
             <AddCommentForm onSendComment={onSendComment} />
