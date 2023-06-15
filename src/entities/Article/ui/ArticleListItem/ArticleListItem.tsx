@@ -23,7 +23,7 @@ interface ArticleListItemProps {
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
   const { className, article, view } = props
-  const { t } = useTranslation()
+  const { t } = useTranslation('article-details')
   const navigate = useNavigate()
 
   const onOpenArticle = useCallback(() => {
@@ -59,7 +59,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     )}
                     <div className={cls.footer}>
                         <Button onClick={onOpenArticle} theme={ButtonTheme.OUTLINE}>
-                            {t('Читать далее...')}
+                            {t('ReadMore')}
                         </Button>
                         {views}
                     </div>

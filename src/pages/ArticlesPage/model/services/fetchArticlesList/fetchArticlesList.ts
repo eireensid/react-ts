@@ -1,8 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { type ThunkConfig } from 'app/providers/StoreProvider'
 import { type Article } from 'entities/Article'
-import {useSelector} from "react-redux";
-import {getArticlesPageLimit} from "pages/ArticlesPage/model/selectors/articlesPageSelectors";
+import { getArticlesPageLimit } from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
 
 interface fetchArticlesListProps {
   page?: number
@@ -16,7 +15,7 @@ ThunkConfig<string>
   'articlesPage/fetchArticlesList',
   async (props, thunkApi) => {
     const { extra, rejectWithValue, getState } = thunkApi
-    const {page = 1} = props
+    const { page = 1 } = props
     const limit = getArticlesPageLimit(getState())
 
     try {
