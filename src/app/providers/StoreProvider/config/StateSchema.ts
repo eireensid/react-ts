@@ -13,9 +13,11 @@ import {
 } from 'pages/ArticleDetailsPage/model/types/ArticleDetailsCommentsSchema'
 import { type AddCommentFormSchema } from 'features/addCommentForm'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
+import { type UISchema } from 'features/ScrollSave'
 
 export interface StateSchema {
   user: UserSchema
+  ui: UISchema
 
   // async reducers
   loginForm?: LoginSchema
