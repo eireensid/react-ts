@@ -13,6 +13,7 @@ import {
   type ArticleDetailsCommentsSchema
 } from 'pages/ArticleDetailsPage/model/types/ArticleDetailsCommentsSchema'
 import { type AddCommentFormSchema } from 'features/addCommentForm'
+import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 
 export interface StateSchema {
   user: UserSchema
@@ -23,6 +24,7 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsSchema
   addCommentForm?: AddCommentFormSchema
+  articlesPage?: ArticlesPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
