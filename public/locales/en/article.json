@@ -19,5 +19,8 @@
   "IT": "IT",
   "Economics": "Economics",
   "Science": "Science",
-  "Recommend": "Recommend"
+  "Recommend": "Recommend",
+  "Edit": "Edit",
+  "NewArticleCreation": "New article creation",
+  "ArticleEdit": "Edit article with ID ="
 }

@@ -20,5 +20,7 @@
   "MenuAbout": "About",
   "MenuProfile": "Profile",
   "MenuArticles": "Articles",
-  "NoComments": "There are no comments"
+  "NoComments": "There are no comments",
+  "ReactApp": "React App",
+  "CreateArticle": "Create article"
 }

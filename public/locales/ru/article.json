@@ -19,5 +19,8 @@
   "IT": "Айти",
   "Economics": "Экономика",
   "Science": "Наука",
-  "Recommend": "Рекомендуем"
+  "Recommend": "Рекомендуем",
+  "Edit": "Редактировать",
+  "NewArticleCreation": "Создание новой статьи",
+  "ArticleEdit": "Редактирование статьи с ID ="
 }

@@ -56,7 +56,8 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'n/no-callback-literal': 'off'
+    'n/no-callback-literal': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off'
   },
   globals: {
     __IS_DEV__: true,

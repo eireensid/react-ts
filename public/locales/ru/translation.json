@@ -20,5 +20,7 @@
   "MenuAbout": "О сайте",
   "MenuProfile": "Профиль",
   "MenuArticles": "Статьи",
-  "NoComments": "Комментарии отсутствуют"
+  "NoComments": "Комментарии отсутствуют",
+  "ReactApp": "React App",
+  "CreateArticle": "Создать статью"
 }
