@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import { memo } from 'react'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import cls from './ArticleList.module.scss'
@@ -11,6 +11,7 @@ interface ArticleListProps {
   className?: string
   articles: Article[]
   isLoading?: boolean
+  target?: HTMLAttributeAnchorTarget
   view?: ArticleView
 }
 
@@ -25,7 +26,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
     className,
     articles,
     view = ArticleView.SMALL,
-    isLoading
+    isLoading,
+    target
   } = props
   const { t } = useTranslation('article')
 
@@ -35,6 +37,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             view={view}
             className={cls.card}
             key={article.id}
+            target={target}
         />
   )
 
