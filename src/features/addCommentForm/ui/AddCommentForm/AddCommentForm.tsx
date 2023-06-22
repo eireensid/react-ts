@@ -13,6 +13,7 @@ import {
 } from '../../model/slices/addCommentFormSlice'
 import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors'
 import cls from './AddCommentForm.module.scss'
+import { HStack } from 'shared/ui/Stack'
 
 export interface AddCommentFormProps {
   className?: string
@@ -41,7 +42,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+            <HStack justify={'between'} max className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
                     placeholder={t('EnterComment')}
@@ -55,7 +56,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                 >
                     {t('Send')}
                 </Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
   )
 })
