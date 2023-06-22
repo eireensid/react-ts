@@ -5,7 +5,7 @@ import {
   getArticlesPageLimit, getArticlesPageNum,
   getArticlesPageOrder,
   getArticlesPageSearch, getArticlesPageSort, getArticlesPageType
-} from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
+} from '../../selectors/articlesPageSelectors'
 import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams'
 
 interface fetchArticlesListProps {

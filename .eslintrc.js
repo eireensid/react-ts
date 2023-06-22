@@ -18,7 +18,8 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'i18next',
-    'react-hooks'
+    'react-hooks',
+    'eireensid'
   ],
   rules: {
     'react/jsx-filename-extension': [2, {
@@ -57,7 +58,8 @@ module.exports = {
     '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'n/no-callback-literal': 'off',
-    '@typescript-eslint/restrict-template-expressions': 'off'
+    '@typescript-eslint/restrict-template-expressions': 'off',
+    'eireensid/path-checker': 'error'
   },
   globals: {
     __IS_DEV__: true,
