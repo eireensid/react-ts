@@ -1,49 +1,50 @@
-import { Fragment, ReactNode } from 'react';
-import { Listbox as HListBox } from '@headlessui/react';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { HStack } from '../Stack';
-import { Button } from '../Button/Button';
-import cls from './ListBox.module.scss';
+import { Fragment, type ReactNode } from 'react'
+import { Listbox as HListBox } from '@headlessui/react'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { HStack } from '../Stack'
+import { Button } from '../Button/Button'
+import cls from './ListBox.module.scss'
+import { type DropdownDirection } from 'shared/types/ui'
 
 export interface ListBoxItem {
-    value: string;
-    content: ReactNode;
-    disabled?: boolean;
+  value: string
+  content: ReactNode
+  disabled?: boolean
 }
 
-type DropdownDirection = 'top' | 'bottom';
-
 interface ListBoxProps {
-    items?: ListBoxItem[];
-    className?: string;
-    value?: string;
-    defaultValue?: string;
-    onChange: (value: string) => void;
-    readonly?: boolean;
-    direction?: DropdownDirection;
-    label?: string;
+  items?: ListBoxItem[]
+  className?: string
+  value?: string
+  defaultValue?: string
+  onChange: (value: string) => void
+  readonly?: boolean
+  direction?: DropdownDirection
+  label?: string
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-    bottom: cls.optionsBottom,
-    top: cls.optionsTop,
-};
+  'bottom left': cls.optionsBottomLeft,
+  'bottom right': cls.optionsBottomRight,
+  'top right': cls.optionsTopRight,
+  'top left': cls.optionsTopLeft
+}
 
-export function ListBox(props: ListBoxProps) {
-    const {
-        className,
-        items,
-        value,
-        defaultValue,
-        onChange,
-        readonly,
-        direction = 'bottom',
-        label,
-    } = props;
+export function ListBox (props: ListBoxProps) {
+  const {
+    className,
+    items,
+    value,
+    defaultValue,
+    onChange,
+    readonly,
+    direction = 'bottom right',
+    label
+  } = props
 
-    const optionsClasses = [mapDirectionClass[direction]];
+  const optionsClasses = [mapDirectionClass[direction]]
 
-    return (
+  return (
         <HStack gap="4">
             {label && <span>{`${label}>`}</span>}
             <HListBox
@@ -69,11 +70,11 @@ export function ListBox(props: ListBoxProps) {
                             {({ active, selected }) => (
                                 <li
                                     className={classNames(
-                                        cls.item,
-                                        {
-                                            [cls.active]: active,
-                                            [cls.disabled]: item.disabled,
-                                        },
+                                      cls.item,
+                                      {
+                                        [cls.active]: active,
+                                        [cls.disabled]: item.disabled
+                                      }
                                     )}
                                 >
                                     {selected && '!!!'}
@@ -85,5 +86,5 @@ export function ListBox(props: ListBoxProps) {
                 </HListBox.Options>
             </HListBox>
         </HStack>
-    );
+  )
 }
