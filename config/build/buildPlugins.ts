@@ -4,6 +4,7 @@ import { type BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import CopyPlugin from 'copy-webpack-plugin'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
 
 export function buildPlugins ({
   paths, isDev, apiUrl, project
@@ -26,6 +27,10 @@ export function buildPlugins ({
       patterns: [
         { from: paths.locales, to: paths.buildLocales }
       ]
+    }),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: true
     })
   ]
 

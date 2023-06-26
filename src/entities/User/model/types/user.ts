@@ -1,4 +1,4 @@
-import { type UserRole } from 'entities/User/model/consts/userConsts'
+import { type UserRole } from '../../model/consts/userConsts'
 
 export interface User {
   id: string
