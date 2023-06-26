@@ -15,7 +15,7 @@ export {
 
 export {
   UserRole
-} from './model/types/user'
+} from './model/consts/userConsts'
 
 export type {
   UserSchema,

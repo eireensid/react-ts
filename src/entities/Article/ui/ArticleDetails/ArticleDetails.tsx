@@ -31,8 +31,9 @@ import {
   getArticleDetailsError,
   getArticleDetailsIsLoading
 } from '../../model/selectors/articleDetails'
-import { type ArticleBlock, ArticleBlockType } from '../../model/types/article'
+import { type ArticleBlock } from '../../model/types/article'
 import { HStack, VStack } from 'shared/ui/Stack'
+import { ArticleBlockType } from '../../model/consts/articleConsts'
 
 interface ArticleDetailsProps {
   className?: string

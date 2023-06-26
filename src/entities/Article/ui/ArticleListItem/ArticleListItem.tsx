@@ -10,10 +10,12 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import cls from './ArticleListItem.module.scss'
 import {
-  type Article, ArticleBlockType, type ArticleTextBlock, ArticleView
+  type Article, type ArticleTextBlock
 } from '../../model/types/article'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
+import { ArticleView } from 'entities/Article'
+import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts'
 
 interface ArticleListItemProps {
   className?: string
