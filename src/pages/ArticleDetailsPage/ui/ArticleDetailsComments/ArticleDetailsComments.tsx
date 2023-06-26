@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { memo, useCallback } from 'react'
+import { memo, useCallback, Suspense } from 'react'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { AddCommentForm } from 'features/addCommentForm'
 import { CommentList } from 'entities/Comment'
@@ -13,10 +13,11 @@ import {
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
+import { Loader } from 'shared/ui/Loader/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string
-  id: string
+  id?: string
 }
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {
@@ -40,7 +41,9 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
                 size={TextSize.L}
                 title={t('Комментарии')}
             />
-            <AddCommentForm onSendComment={onSendComment} />
+            <Suspense fallback={<Loader />}>
+                <AddCommentForm onSendComment={onSendComment} />
+            </Suspense>
             <CommentList
                 isLoading={commentsIsLoading}
                 comments={comments}
