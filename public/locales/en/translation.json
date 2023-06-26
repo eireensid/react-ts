@@ -23,5 +23,6 @@
   "NoComments": "There are no comments",
   "ReactApp": "React App",
   "CreateArticle": "Create article",
-  "Profile": "Профиль"
+  "Profile": "Profile",
+  "Admin": "Admin"
 }

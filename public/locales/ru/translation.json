@@ -23,5 +23,6 @@
   "NoComments": "Комментарии отсутствуют",
   "ReactApp": "React App",
   "CreateArticle": "Создать статью",
-  "Profile": "Профиль"
+  "Profile": "Профиль",
+  "Admin": "Админка"
 }
