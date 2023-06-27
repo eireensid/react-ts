@@ -1,6 +1,6 @@
-import babelRemovePropsPlugin from '../../babel/babelRemovePropsPlugin';
+import babelRemovePropsPlugin from '../../babel/babelRemovePropsPlugin'
 
-export function buildBabelLoader() {
+export function buildBabelLoader () {
   return {
     test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,
