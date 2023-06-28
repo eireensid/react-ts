@@ -7,11 +7,11 @@ import { LoginModal } from '@/features/AuthByUsername'
 import { useSelector } from 'react-redux'
 import { getUserAuthData } from '@/entities/User'
 import { Text, TextTheme } from '@/shared/ui/Text/Text'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
 import { HStack } from '@/shared/ui/Stack'
 import { NotificationButton } from '@/features/notificationButton'
 import { AvatarDropdown } from '@/features/avatarDropdown'
+import { RoutePath } from '@/shared/const/router'
 
 interface NavbarProps {
   className?: string
