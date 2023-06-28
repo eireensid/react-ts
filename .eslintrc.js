@@ -11,7 +11,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect"
+      version: 'detect'
     }
   },
   plugins: [
@@ -59,7 +59,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'n/no-callback-literal': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
-    'eireensid/path-checker': 'error',
+    'eireensid/path-checker': ['error', { alias: '@' }],
     '@typescript-eslint/consistent-type-imports': 'off'
   },
   globals: {
@@ -74,4 +74,4 @@ module.exports = {
       'max-len': 'off'
     }
   }]
-};
+}

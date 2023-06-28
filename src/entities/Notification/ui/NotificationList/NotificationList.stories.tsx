@@ -2,8 +2,8 @@ import React from 'react'
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 
 import { NotificationList } from './NotificationList'
-import withMock from "storybook-addon-mock";
-import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import withMock from 'storybook-addon-mock'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'entities/Notification/NotificationList',
@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof NotificationList> = (args) => <Notificatio
 
 export const Normal = Template.bind({})
 Normal.args = {}
-Normal.decorators = [StoreDecorator({})];
+Normal.decorators = [StoreDecorator({})]
 Normal.parameters = {
   mockData: [
     {
@@ -29,19 +29,19 @@ Normal.parameters = {
         {
           id: '1',
           title: 'Уведомление',
-          description: 'Поставь лайк и оставь комментарий под Ulbi TV',
+          description: 'Поставь лайк и оставь комментарий под Ulbi TV'
         },
         {
           id: '2',
           title: 'Уведомление 2',
-          description: 'Поставь лайк и оставь комментарий под Ulbi TV',
+          description: 'Поставь лайк и оставь комментарий под Ulbi TV'
         },
         {
           id: '3',
           title: 'Уведомление 3',
-          description: 'Поставь лайк и оставь комментарий под Ulbi TV',
-        },
-      ],
-    },
-  ],
-};
+          description: 'Поставь лайк и оставь комментарий под Ulbi TV'
+        }
+      ]
+    }
+  ]
+}
