@@ -19,7 +19,8 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
-    'eireensid'
+    'eireensid',
+    'unused-imports'
   ],
   rules: {
     'react/jsx-filename-extension': [2, {
@@ -74,7 +75,8 @@ module.exports = {
         ignoreImportPatterns: ['**/StoreProvider', '**/testing']
       }
     ],
-    '@typescript-eslint/consistent-type-imports': 'off'
+    '@typescript-eslint/consistent-type-imports': 'off',
+    'unused-imports/no-unused-imports': 'error'
   },
   globals: {
     __IS_DEV__: true,
