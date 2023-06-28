@@ -1,5 +1,7 @@
 import { type Story } from '@storybook/react'
-import { type Theme, ThemeProvider } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/const/theme'
+// eslint-disable-next-line eireensid/layer-imports
+import { ThemeProvider } from '@/app/providers/ThemeProvider'
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => (
   <ThemeProvider initialTheme={theme}>

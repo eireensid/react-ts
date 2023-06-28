@@ -67,6 +67,13 @@ module.exports = {
         testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx']
       }
     ],
+    'eireensid/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing']
+      }
+    ],
     '@typescript-eslint/consistent-type-imports': 'off'
   },
   globals: {
