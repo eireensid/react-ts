@@ -1,17 +1,17 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import {
   DynamicModuleLoader, type ReducersList
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { memo, useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text'
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import { Avatar } from 'shared/ui/Avatar/Avatar'
-import EyeIcon from 'shared/assets/icons/eye-icon.svg'
-import CalendarIcon from 'shared/assets/icons/calendar-icon.svg'
-import { Icon } from 'shared/ui/Icon/Icon'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text'
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import EyeIcon from '@/shared/assets/icons/eye-icon.svg'
+import CalendarIcon from '@/shared/assets/icons/calendar-icon.svg'
+import { Icon } from '@/shared/ui/Icon/Icon'
 import {
   ArticleCodeBlockComponent
 } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
@@ -32,7 +32,7 @@ import {
   getArticleDetailsIsLoading
 } from '../../model/selectors/articleDetails'
 import { type ArticleBlock } from '../../model/types/article'
-import { HStack, VStack } from 'shared/ui/Stack'
+import { HStack, VStack } from '@/shared/ui/Stack'
 import { ArticleBlockType } from '../../model/consts/articleConsts'
 
 interface ArticleDetailsProps {
