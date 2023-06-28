@@ -4,7 +4,7 @@ export {
 
 export type { Article } from './model/types/article'
 export {
-  ArticleView, ArticleSortField, ArticleType
+  ArticleView, ArticleSortField, ArticleType, ArticleBlockType
 } from './model/consts/articleConsts'
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema'
 

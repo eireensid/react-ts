@@ -60,6 +60,7 @@ module.exports = {
     'n/no-callback-literal': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     'eireensid/path-checker': ['error', { alias: '@' }],
+    'eireensid/public-api-imports': ['error', { alias: '@' }],
     '@typescript-eslint/consistent-type-imports': 'off'
   },
   globals: {

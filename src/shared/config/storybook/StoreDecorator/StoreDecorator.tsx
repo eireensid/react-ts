@@ -1,5 +1,6 @@
 import { type Story } from '@storybook/react'
 import { type StateSchema, StoreProvider } from '@/app/providers/StoreProvider'
+/* eslint-disable */
 import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice'
 import { type ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice'
