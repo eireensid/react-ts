@@ -1,30 +1,41 @@
 import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
 import { type CSSProperties, useMemo } from 'react'
 import cls from './Avatar.module.scss'
+import { AppImage } from '../AppImage'
+import { Icon } from '../Icon'
+import UserIcon from '../../assets/icons/user-filled.svg'
+import { Skeleton } from '../Skeleton'
 
 interface AvatarProps {
   className?: string
   src?: string
   size?: number
   alt?: string
+  fallbackInverted?: boolean
 }
 
 export const Avatar = ({
-  className, src, size, alt
+  className, src, size = 100, alt,
+  fallbackInverted
 }: AvatarProps) => {
   const mods: Mods = {}
 
   const styles = useMemo<CSSProperties>(() => ({
-    width: size || 100,
-    height: size || 100
+    width: size,
+    height: size
   }), [size])
 
+  const fallback = <Skeleton width={200} height={200} border={'50%'}/>
+  const errorFallback = <Icon inverted={fallbackInverted} width={size} height={size} Svg={UserIcon} />
+
   return (
-        <img
-            src={src}
-            alt={alt}
-            style={styles}
-            className={classNames(cls.Avatar, mods, [className])}
-        />
+    <AppImage
+      fallback={fallback}
+      errorFallback={errorFallback}
+      src={src}
+      alt={alt}
+      style={styles}
+      className={classNames(cls.Avatar, mods, [className])}
+    />
   )
 }
