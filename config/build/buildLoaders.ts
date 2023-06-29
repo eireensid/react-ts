@@ -35,7 +35,7 @@ export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node-modules/
   }
 
-  const babelLoader = buildBabelLoader()
+  const babelLoader = buildBabelLoader(options)
 
   return [
     babelLoader,
