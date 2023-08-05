@@ -76,7 +76,9 @@ module.exports = {
       }
     ],
     '@typescript-eslint/consistent-type-imports': 'off',
-    'unused-imports/no-unused-imports': 'error'
+    'unused-imports/no-unused-imports': 'error',
+    '@typescript-eslint/method-signature-style': 'off',
+    '@typescript-eslint/no-namespace': 'off'
   },
   globals: {
     __IS_DEV__: true,
