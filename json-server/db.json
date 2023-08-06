@@ -537,6 +537,32 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Python news",
+      "subtitle": "Что нового в JS за 2022 год?",
+      "img": "https://sun9-37.userapi.com/impg/vt-9QQJpLmTlFHcq_Pu5lZfr698TsTvqCoXYTQ/HSspBw8OVwI.jpg?size=900x900&quality=96&sign=6534ff45ef9a5063ba9ee7528407a0ca&c_uniq_tag=9ImconWnWkRe5J8WVqPDfsPqlJZXMdCdPeilXGDvLkg&type=album",
+      "views": 5022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "Jcp5S1e"
+    },
+    {
+      "title": "Python news",
+      "subtitle": "Что нового в JS за 2022 год?",
+      "img": "https://sun9-37.userapi.com/impg/vt-9QQJpLmTlFHcq_Pu5lZfr698TsTvqCoXYTQ/HSspBw8OVwI.jpg?size=900x900&quality=96&sign=6534ff45ef9a5063ba9ee7528407a0ca&c_uniq_tag=9ImconWnWkRe5J8WVqPDfsPqlJZXMdCdPeilXGDvLkg&type=album",
+      "views": 5022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "95RUF2d"
     }
   ],
   "comments": [
@@ -563,6 +589,18 @@
       "userId": "1",
       "text": "fdfd",
       "id": "q3GeyOr"
+    },
+    {
+      "articleId": "95RUF2d",
+      "userId": "4",
+      "text": "text",
+      "id": "jT3pnaD"
+    },
+    {
+      "articleId": "VaGaa4d",
+      "userId": "4",
+      "text": "tt",
+      "id": "1rV4Fav"
     }
   ],
   "users": [
@@ -624,6 +662,17 @@
       "country": "Russia",
       "city": "",
       "username": "user",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "4",
+      "first": "testuser",
+      "lastname": "user",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "",
+      "username": "testuser",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],

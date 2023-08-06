@@ -13,7 +13,7 @@ User,
 LoginByUsernameProps,
 ThunkConfig<string>
 >(
-  'login/loginByUsername',
+  'common/loginByUsername',
   async (authData, thunkAPI) => {
     const { extra, dispatch, rejectWithValue } = thunkAPI
 
